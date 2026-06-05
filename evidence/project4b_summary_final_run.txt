@@ -1,0 +1,39 @@
+Project 4B - Wokwi NTC Thermistor Temperature Test Bench
+
+Purpose:
+Validate a simulated NTC thermistor temperature measurement workflow using Arduino ADC data, sensor conversion math, threshold classification, Python analysis, plots, and automated report generation.
+
+Circuit Description:
+The simulated circuit uses an Arduino Uno analog input connected to a Wokwi NTC temperature sensor. The model represents a 10k NTC thermistor behavior with a beta coefficient of 3950 and a 10k nominal resistance at 25 C.
+
+Formula Summary:
+voltage = adc_value * 5.0 / 1023.0
+resistance_ntc = fixed_resistor * voltage / (5.0 - voltage)
+1/T = 1/T0 + (1/B) * ln(R/R0)
+temperature_c = temperature_k - 273.15
+
+Test Limits:
+NORMAL: temperature < 40 C
+WARN: 40 C <= temperature < 50 C
+FAIL: temperature >= 50 C
+
+Status Counts:
+NORMAL: 4
+WARN: 3
+FAIL: 4
+
+Engineering Summary:
+Samples analyzed: 11
+Minimum temperature: 24.96 C
+Maximum temperature: 57.94 C
+Average temperature: 43.53 C
+Minimum voltage: 1.056 V
+Maximum voltage: 2.502 V
+Minimum resistance: 2676.6 ohms
+Maximum resistance: 10019.6 ohms
+
+Final Result:
+FAIL
+
+Conclusion:
+The Project 4B test bench demonstrates a complete simulated embedded sensor validation workflow: analog sensing, ADC conversion, thermistor resistance calculation, temperature conversion, threshold classification, CSV logging, Python analysis, and automated engineering report generation.
