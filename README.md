@@ -30,7 +30,7 @@ wokwi/diagram.json
 After uploading to GitHub, add your public Wokwi simulation link here:
 
 ```text
-Wokwi Simulation: ADD_LINK_HERE
+Wokwi Simulation: https://wokwi.com/projects/466046213563687937
 ```
 
 ## Engineering Goal
